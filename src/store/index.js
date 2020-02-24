@@ -1,15 +1,17 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
+import post from "./modules/post";
+import VuexPersist from "vuex-persist";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
+const vuexPersist = new VuexPersist({
+  key: "my-app",
+  storage: window.localStorage
+});
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
-  }
-})
+    post
+  },
+  plugins: [vuexPersist.plugin]
+});

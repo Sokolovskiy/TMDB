@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="favorite">
     <b-container>
       <b-row>
         <b-col>
@@ -12,7 +12,7 @@
     <b-container>
       <b-row>
         <b-col>
-          <PopularMovie />
+          <FavoriteMovie />
         </b-col>
       </b-row>
     </b-container>
@@ -22,13 +22,13 @@
 <script>
 import SearchInput from "@/components/SearchInput.vue";
 import SearchResults from "@/components/SearchResults.vue";
-import PopularMovie from "@/components/PopularMovie.vue";
+import FavoriteMovie from "@/components/FavoriteMovie.vue";
 
 export default {
   name: "Home",
   components: {
     SearchInput,
-    PopularMovie,
+    FavoriteMovie,
     SearchResults
   }
 };
